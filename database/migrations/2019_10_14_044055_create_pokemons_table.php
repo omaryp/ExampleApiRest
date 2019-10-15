@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTablePokemons extends Migration
+class CreatePokemonsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTablePokemons extends Migration
      */
     public function up()
     {
-        Schema::create('table_pokemons', function (Blueprint $table) {
+        Schema::create('pokemon', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("nombre",50);
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateTablePokemons extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_pokemons');
+        Schema::dropIfExists('pokemon');
     }
 }
